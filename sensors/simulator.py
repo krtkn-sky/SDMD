@@ -1,10 +1,11 @@
 import sqlite3
 from flask import Flask, g, request, jsonify, render_template
 from flask_cors import CORS
-from utils.alerts import check_alerts
 
 import sys, os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from utils.alerts import check_alerts
 
 DATABASE = 'database.db'
 APP = Flask(__name__)
