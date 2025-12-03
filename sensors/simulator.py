@@ -3,6 +3,9 @@ from flask import Flask, g, request, jsonify, render_template
 from flask_cors import CORS
 from utils.alerts import check_alerts
 
+import sys, os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 DATABASE = 'database.db'
 APP = Flask(__name__)
 CORS(APP)
